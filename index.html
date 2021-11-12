@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Minesweeper JS</h1>
+    <form id="game-options">
+        <p id="error-message"></p>
+        <p class="current-selected-board-size">Current Board Size: <span id="board-size"></span></p>
+        
+        <label name="rows"><span id="current-rows"></span> Rows <span class="valid-range">(2-20)</span></label>
+        <input type="range" value="10" id="input-rows" min="2" max="20">
+        
+        <label name="columns"><span id="current-columns"></span> Columns <span class="valid-range">(2-20)</span></label>
+        <input type="range" value="10" id="input-columns" min="2" max="20">
+        
+        <label><span id="current-mines"></span> Mines (&lt; board size)</label>
+        <input type="range" id="input-mines" value="10" min="1">
+        
+        <label><span id="current-timer"></span> Timer (mm:ss)</label>
+        <input type="range" id="input-timer" value="60" min="10" max="600" step="10">
+        
+        <h2>Preset Settings:</h2>
+        <ul class="preset-settings">
+            <li id="beginner-preset" class="preset-difficulty">Beginner</li>
+            <li id="intermediate-preset" class="preset-difficulty">Intermediate</li>
+            <li id="expert-preset" class="preset-difficulty">Expert</li>
+            <li id="crazy-preset" class="preset-difficulty">Crazy</li>
+        </ul>
+     
+                
+        <input type="button" id="start-game" value="Start Game!">
+
+    </form>
+
+    <div id="game-container">
+        <div id="game-counter">
+            <p>Left-click: Reveal | Right-click: Flag</p>
+            <p>Time Remaining: <span id="remaining-time"></span></p>
+            <p>Remaining Mines: <span id="remaining-mines"></span></p>
+        </div>
+    
+        <div id="minesweeper-board"> <!-- Game Board Generated Here--> </div>
+        
+        <div id="game-stats">
+            <h1 id="game-result"></h1>
+            <p>Total Tiles Revealed: <span id="total-checked"></span></p>
+            <p>Total Tiles Flagged: <span id="total-flagged"></span></p>
+            <p>Time Remaining: <span id="total-time"></span></p>
+            <input type="button" id="new-game" value="Play Again?">
+        </div>
+    </div>
+
+
+
+
+    <script src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* MAIN */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightcyan;
+}
+
+body h1 {
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+/* GAME OPTIONS */
+#game-options {
+    display: flex;
+    flex-direction: column;
+    width: min(50%, 500px);
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+.current-selected-board-size {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#game-options label {
+    padding-top: 1em;
+}
+
+#current-rows, #current-columns, #current-mines, #current-timer {
+    border-radius: 5px;
+    padding: 0.2em;
+    color: darkslategrey;
+}
+
+.preset-settings {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+#game-options h2 {
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+.preset-difficulty {
+    cursor: pointer;
+    display: inline;
+    border: 2px solid black;
+    padding: 0.2em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.preset-difficulty:hover {
+    background-color: slategrey;
+}
+
+#start-game {
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: none;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#start-game:hover {
+    background-color: white;
+}
+
+
+
+/* GAME BOARD */
+#game-container {
+    display: none;
+}
+
+#minesweeper-board {
+    display: grid;
+    width: 0%;
+    align-items: stretch;
+}
+
+.tile {
+    background-color: cadetblue;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid darkslategrey;
+    height: 30px;
+    width: 30px;
+}
+
+.tile .surrounding-mines {
+    visibility: hidden;
+}
+
+.tile-checked {
+    background-color: green;
+    color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.flagged {
+    background: url("/images/flag.svg");
+    background-color: cadetblue;
+}
+
+.surrounding-mines {
+    pointer-events: none;
+}
+
+.tile-checked .surrounding-mines {
+    visibility: visible;
+}
+
+.mine-checked {
+    background: url("/images/bomb.svg");
+    background-color: cadetblue;
+}
+
+#game-counter {
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+/* GAME STATS */
+#game-stats {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+#game-result {
+    padding: 0 1em;
+}
+
+#game-stats p {
+    font-style: italic;
+}
+
+#new-game {
+    text-align: center;
+    padding: 0.2em;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    #game-options {
+        width: 90%;
+    }
+
+    .preset-settings {
+        flex-direction: column;
+        text-align: center;
+    }
+}
