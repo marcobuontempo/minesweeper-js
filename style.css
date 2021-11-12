@@ -134,7 +134,7 @@ body h1 {
 }
 
 .flagged {
-    background: url("/images/flag.svg");
+    background: url("./images/flag.svg");
     background-color: cadetblue;
 }
 
@@ -147,7 +147,7 @@ body h1 {
 }
 
 .mine-checked {
-    background: url("/images/bomb.svg");
+    background: url(."/images/bomb.svg");
     background-color: cadetblue;
 }
 
