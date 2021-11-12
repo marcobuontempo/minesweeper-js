@@ -8,6 +8,7 @@
 html {
     height: 100%;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -147,15 +148,23 @@ body h1 {
 }
 
 .mine-checked {
-    background: url(."/images/bomb.svg");
+    background: url("./images/bomb.svg");
     background-color: cadetblue;
 }
 
 #game-counter {
     text-align: center;
     font-style: italic;
+    padding: 0.5em;
 }
 
+.low-time {
+    color: orange;
+}
+
+.critical-low-time {
+    color: red;
+}
 
 
 /* GAME STATS */
