@@ -570,8 +570,8 @@ document.querySelectorAll(".preset-difficulty").forEach(option => option.addEven
         columns.value = 10;
         rows.value = 10;
         mines.max = currentBoardSizeSelected()-1;
-        mines.value = 25;
-        seconds.value = 300;
+        mines.value = 10;
+        seconds.value = 60;
     } else if (difficulty == "expert-preset") {
         columns.value = 15;
         rows.value = 15;
