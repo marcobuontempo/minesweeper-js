@@ -96,7 +96,7 @@ The game is built as a web application, and can be run directly in the browser. 
     - Checking the surrounding tiles when clicking a blank tile
 - A board is presented as a CSS grid. This allows it to be dynamically displayed, as the ````grid-columns```` and ````grid-rows```` are changed according to the user's input of columns and rows. Each tile is also assigned it's position in the grid, similarly, using some basic equations. NOTE: it displays the tile array in reverse order. For example:
     ````
-    9, 8, 9
+    7, 8, 9
     4, 5, 6
     1, 2, 3
     ````
