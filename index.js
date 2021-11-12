@@ -560,25 +560,28 @@ document.querySelectorAll(".preset-difficulty").forEach(option => option.addEven
     const mines = document.querySelector("#input-mines");
     const seconds = document.querySelector("#input-timer");
 
-
     if (difficulty == "beginner-preset") {
         columns.value = 5;
         rows.value = 5;
+        mines.max = currentBoardSizeSelected()-1;
         mines.value = 5;
         seconds.value = 90;
     } else if (difficulty == "intermediate-preset") {
         columns.value = 10;
         rows.value = 10;
+        mines.max = currentBoardSizeSelected()-1;
         mines.value = 25;
         seconds.value = 300;
     } else if (difficulty == "expert-preset") {
         columns.value = 15;
         rows.value = 15;
+        mines.max = currentBoardSizeSelected()-1;
         mines.value = 50;
         seconds.value = 480;
     } else if (difficulty == "crazy-preset") {
         columns.value = 20;
         rows.value = 20;
+        mines.max = currentBoardSizeSelected()-1;
         mines.value = 200;
         seconds.value = 600;
     }
@@ -586,8 +589,7 @@ document.querySelectorAll(".preset-difficulty").forEach(option => option.addEven
     document.querySelector("#board-size").innerHTML = currentBoardSizeSelected();
     document.querySelector("#current-rows").innerHTML = document.querySelector("#input-rows").value;
     document.querySelector("#current-columns").innerHTML = document.querySelector("#input-columns").value;
-    document.querySelector("#current-mines").innerHTML = document.querySelector("#input-mines").value;
-    document.querySelector("#input-mines").max = currentBoardSizeSelected()-1;
+    document.querySelector("#current-mines").innerHTML = mines.value;
     currentTimerSelected();
 }))
 
