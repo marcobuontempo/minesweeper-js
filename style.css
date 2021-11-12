@@ -14,7 +14,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     justify-content: flex-start;
     align-items: center;
@@ -38,6 +37,7 @@ body h1 {
     padding: 2em;
     border-radius: 5px;
     background-color: lightgrey;
+    margin-bottom: 50px;
 }
 
 .current-selected-board-size {
@@ -139,6 +139,10 @@ body h1 {
     align-items: center;
 }
 
+#board {
+    border: 2px solid darkslategrey;
+}
+
 #minesweeper-board {
     display: grid;
     width: 0%;
@@ -188,7 +192,17 @@ body h1 {
 #game-counter {
     text-align: center;
     font-style: italic;
+    font-weight: bold;
     padding: 0.5em;
+}
+
+.instructions {
+    color: darkslategrey;
+    padding-bottom: 0.5em;
+}
+
+#remaining-time, #remaining-mines {
+    font-weight: normal;
 }
 
 .low-time {
