@@ -625,7 +625,7 @@ function startGame () {
     if(validateGameOptions(columns, rows, mines, seconds)) {     // Only create game if inputs are valid
         // Hide input options and show game board
         document.querySelector("#game-options").style.display = "none";
-        document.querySelector("#game-container").style.display = "block";
+        document.querySelector("#game-container").style.display = "flex";
 
 
         // Create the board and display it

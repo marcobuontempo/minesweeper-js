@@ -104,6 +104,8 @@ body h1 {
 /* GAME BOARD */
 #game-container {
     display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
 #minesweeper-board {
