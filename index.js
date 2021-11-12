@@ -453,7 +453,7 @@ class MinesweeperBoard {
         let html = [];
         for(let i=0; i<this.boardSize; i++) {
             const hasColumn = Math.floor(i%this.options.width)+1;
-            const hasRow = Math.floor(i/this.options.width)+1;
+            const hasRow = Math.abs(Math.floor(i/this.options.width)-10);
             const hasMine = this.board[i].mine;
             const hasSurroundingMines = (this.board[i].surroundingMines > 0  &&  !hasMine) ? this.board[i].surroundingMines : "";
             const tileHtml = 
@@ -491,6 +491,7 @@ class MinesweeperBoard {
         gameCounter.style.visibility = "hidden";
         gameStats.style.display = "flex";
         gameBoard.style.filter = "blur(1px)";
+        document.querySelectorAll(".tile").forEach(tile => tile.style.cursor = "default");
         this.gameInProgress = false;
     }
 

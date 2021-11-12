@@ -25,6 +25,7 @@ body h1 {
     padding: 0.5em;
     text-align: center;
     text-transform: uppercase;
+    cursor: default;
 }
 
 
@@ -44,10 +45,11 @@ body h1 {
     font-size: 1.5em;
     padding: 0.5em;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     font-weight: bold;
     font-style: italic;
+    cursor: default;
 }
 
 #game-options label {
@@ -81,6 +83,34 @@ body h1 {
     font-weight: bold;
 }
 
+#beginner-preset {
+    background-color: rgba(0, 150, 0, 0.15);
+}
+#beginner-preset:hover {
+    background-color: rgba(0, 150, 0, 0.3);
+}
+
+#intermediate-preset {
+    background-color: rgba(255, 230, 0, 0.15);
+}
+#intermediate-preset:hover {
+    background-color: rgba(255, 230, 0, 0.3);
+}
+
+#expert-preset {
+    background-color: rgba(255, 115, 0, 0.15);
+}
+#expert-preset:hover {
+    background-color: rgba(255, 115, 0, 0.3);
+}
+
+#crazy-preset {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+#crazy-preset:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
 .preset-difficulty:hover {
     background-color: slategrey;
 }
@@ -92,7 +122,7 @@ body h1 {
     text-transform: uppercase;
     cursor: pointer;
     background: none;
-    border: 3px solid black;
+    border: 5px solid black;
     border-radius: 5px;
 }
 
@@ -188,6 +218,7 @@ body h1 {
 
 #game-stats p {
     font-style: italic;
+    cursor: default;
 }
 
 #new-game {
@@ -201,7 +232,7 @@ body h1 {
 }
 
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 780px) {
 
     #game-options {
         width: 90%;

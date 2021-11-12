@@ -3,7 +3,7 @@
 ## Description
 Minesweeper JS is a small project built primarily for my own educational purpose. It has been created with Javascript to handle most of the logic, while HTML and CSS were used to structure and present the game visually.
 \
-I built this game entirely using my knowledge, using a few hints to assist along the way. Therefore, it is not intended to be the most-efficient or perfect version of Minesweeper available.
+I built this game entirely using my knowledge, using a few hints to assist along the way. Therefore, it is not intended to be the most-efficient, perfect, or even most-logical version of Minesweeper available.
 
 ## How to use?
 The game is built as a web application, and can be run directly in the browser. It is hosted on GitHub pages, and can be accessed directly [here](https://marcobuontempo.github.io/minesweeper-js/)!
@@ -94,7 +94,12 @@ The game is built as a web application, and can be run directly in the browser. 
 - The equations above are used for both:
     - Calculating the number of surrounding mines on a tile
     - Checking the surrounding tiles when clicking a blank tile
-- A board is presented as a CSS grid. This allows it to be dynamically displayed, as the ````grid-columns```` and ````grid-rows```` are changed according to the user's input of columns and rows. Each tile is also assigned it's position in the grid, similarly, using some basic equations
+- A board is presented as a CSS grid. This allows it to be dynamically displayed, as the ````grid-columns```` and ````grid-rows```` are changed according to the user's input of columns and rows. Each tile is also assigned it's position in the grid, similarly, using some basic equations. NOTE: it displays the tile array in reverse order. For example:
+    ````
+    9, 8, 9
+    4, 5, 6
+    1, 2, 3
+    ````
 - To reveal blank tiles, all of the surrounding tiles of the clicked tile are checked:
     - If the tile is numbered, it will reveal the tile
     - If the tile is blank, it will add this to an array of "unchecked tiles"
