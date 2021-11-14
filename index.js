@@ -446,14 +446,14 @@ class MinesweeperBoard {
         
         // Change DOM to correct grid size
         const minesweeperBoard = document.querySelector("#minesweeper-board");
-        minesweeperBoard.style.gridTemplateColumns = this.options.width;
-        minesweeperBoard.style.gridTemplateRows = this.options.height;
+        minesweeperBoard.style.gridTemplateColumns = `repeat(${this.options.width}, 1fr)`;
+        minesweeperBoard.style.gridTemplateRows = `repeat(${this.options.height}, 1fr)`;
 
         // Create array of HTML tiles to render
         let html = [];
         for(let i=0; i<this.boardSize; i++) {
             const hasColumn = Math.floor(i%this.options.width)+1;
-            const hasRow = Math.abs(Math.floor(i/this.options.width)-10);
+            const hasRow = Math.abs(Math.floor(i/this.options.width)-this.options.height);
             const hasMine = this.board[i].mine;
             const hasSurroundingMines = (this.board[i].surroundingMines > 0  &&  !hasMine) ? this.board[i].surroundingMines : "";
             const tileHtml = 
